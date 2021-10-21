@@ -1,1 +1,2 @@
-# CodingGame
+# CodingGame Website Game Codes
+codingame.com
