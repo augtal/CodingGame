@@ -12,18 +12,18 @@ import math
 inputs = [9,8,7,6,5,4,3,2]
 
 
-height_list = []
+# ==================================
+height_list = [0] * 8
 
 # game loop
 while True:
     for i in range(8):
         mountain_h = int(inputs[i])  # represents the height of one mountain.
-        height_list.append(mountain_h)
+        height_list[i] = mountain_h
     
-    print(height_list)
-
-    # Write an action using print
-    # To debug: print("Debug messages...", file=sys.stderr, flush=True)
-
-    # The index of the mountain to fire on.
-    print("4")
+    maxIndex = len(height_list) + 2
+    
+    maxIndex = height_list.index(max(height_list))
+    height_list[maxIndex] = 0
+    print(maxIndex)
+    
