@@ -4,6 +4,11 @@ import math
 # Auto-generated code below aims at helping you parse
 # the standard input according to the problem statement.
 
+#Inputs
+X = 2500
+Y = 2500
+
+
 surface_n = int(input())  # the number of points used to draw the surface of Mars.
 for i in range(surface_n):
     # land_x: X coordinate of a surface point. (0 to 6999)
@@ -22,6 +27,10 @@ while True:
     # Write an action using print
     # To debug: print("Debug messages...", file=sys.stderr, flush=True)
 
-
+    custom_power = 2
+    if v_speed < -37:
+        custom_power = 4
+    
+    result = "0 " + str(custom_power)
     # 2 integers: rotate power. rotate is the desired rotation angle (should be 0 for level 1), power is the desired thrust power (0 to 4).
-    print("0 3")
+    print(result)
